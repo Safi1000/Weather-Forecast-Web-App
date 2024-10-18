@@ -25,4 +25,4 @@ How to Run:
 
                or
 
-5. Open the project with the GITHUB Link provided in the readme
+5. Open the project with the GITHUB Link: https://safi1000.github.io/Weather-Forecast-Web-App/
