@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5-Day Weather Forecast</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="tables.js"></script>
+    <script defer src="chatbot.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="side-menu">
+        <div class="logo">
+          <h1>National Weather</h1>
+        </div>
+        <ul>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="tables.html">Tables</a></li>
+        </ul>
+      </nav>
+
+      <video id="backgroundVideo" autoplay muted loop class="background-video">
+        <source src="videos/weather.mp4" type="video/mp4" />
+      </video>
+
+      <div class="main-content">
+        <div class="search-bar">
+          <input type="text" id="cityInput" placeholder="Enter city name" />
+          <button id="getWeatherBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16a6.471 6.471 0 004.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zM10 14.5c-2.48 0-4.5-2.02-4.5-4.5S7.52 5.5 10 5.5 14.5 7.52 14.5 10 12.48 14.5 10 14.5z"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div class="content-wrapper">
+          <div class="forecast-table-container">
+            <div class="city-display">
+              <p id="cityyname" style="font-size: 2.75rem">City: N/A</p>
+            </div>
+            <table class="forecast-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Weather</th>
+                  <th>Temperature</th>
+                </tr>
+              </thead>
+              <tbody id="forecastTableBody">
+                <!-- Forecast data will be dynamically inserted here -->
+              </tbody>
+            </table>
+            <div id="pagination" class="pagination blur-background">
+              <button id="prevPage" class="nav-button">Previous</button>
+              <span id="pageInfo">Page 1</span>
+              <button id="nextPage" class="nav-button">Next</button>
+            </div>
+          </div>
+
+          <div class="chatbot-container">
+            <div class="chatbot-messages" id="chatbotMessages"></div>
+            <div class="chatbot-input">
+              <input
+                type="text"
+                id="userInput"
+                placeholder="Ask about the weather..."
+              />
+              <button id="sendMessage">Send</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
